@@ -1,0 +1,11 @@
+name,normalized_unit,min_price_per_100,winners,by_store
+Chicken Breast,100g,0.55,Store B,Store B:0.55; Store A:0.67
+Ground Beef,100g,0.65,Store B,Store B:0.65; Store A:0.85
+Greek Yogurt,100g,0.7,Store A,Store A:0.7; Store B:0.9
+Milk,100ml,0.3,Store A,Store A:0.3; Store B:0.4
+Bananas,100g,0.07,Store B,Store B:0.07; Store A:0.13
+Blueberries,100g,0.96,Store B,Store B:0.96; Store A:1.6
+Orange Juice,100ml,0.5,Store A,Store A:0.5; Store B:0.6
+Apple Juice,100ml,0.3,Store B,Store B:0.3; Store A:0.4
+Mars Bar,100g,1.83,"Store A, Store B",Store A:1.83; Store B:1.83
+Ferrero Rocher,100g,6.85,"Store A, Store B",Store A:6.85; Store B:6.85
