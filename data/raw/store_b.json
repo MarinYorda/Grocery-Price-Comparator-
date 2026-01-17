@@ -1,0 +1,75 @@
+{
+  "store": "Store B",
+  "products": [
+    {
+      "name": "Chicken Breast",
+      "category": "meat",
+      "price": 4.99,
+      "quantity": 900,
+      "unit": "g"
+    },
+    {
+      "name": "Ground Beef",
+      "category": "meat",
+      "price": 6.49,
+      "quantity": 1000,
+      "unit": "g"
+    },
+    {
+      "name": "Greek Yogurt",
+      "category": "dairy",
+      "price": 4.49,
+      "quantity": 500,
+      "unit": "g"
+    },
+    {
+      "name": "Milk",
+      "category": "dairy",
+      "price": 3.99,
+      "quantity": 1000,
+      "unit": "ml"
+    },
+    {
+      "name": "Bananas",
+      "category": "fruit",
+      "price": 0.69,
+      "quantity": 1000,
+      "unit": "g"
+    },
+    {
+      "name": "Blueberries",
+      "category": "fruit",
+      "price": 1.49,
+      "quantity": 156,
+      "unit": "g"
+    },
+    {
+      "name": "Orange Juice",
+      "category": "juice",
+      "price": 5.99,
+      "quantity": 1000,
+      "unit": "ml"
+    },
+    {
+      "name": "Apple Juice",
+      "category": "juice",
+      "price": 2.99,
+      "quantity": 1000,
+      "unit": "ml"
+    },
+    {
+      "name": "Mars Bar",
+      "category": "candy",
+      "price": 0.99,
+      "quantity": 54,
+      "unit": "g"
+    },
+    {
+      "name": "Ferrero Rocher",
+      "category": "candy",
+      "price": 0.89,
+      "quantity": 13,
+      "unit": "g"
+    }
+  ]
+}

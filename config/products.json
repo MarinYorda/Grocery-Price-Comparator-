@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Chicken Breast",
+    "category": "meat"
+  },
+  {
+    "name": "Ground Beef",
+    "category": "meat"
+  },
+
+  {
+    "name": "Greek Yogurt",
+    "category": "dairy"
+  },
+  {
+    "name": "Milk",
+    "category": "dairy"
+  },
+
+  {
+    "name": "Bananas",
+    "category": "fruit"
+  },
+  {
+    "name": "Blueberries",
+    "category": "fruit"
+  },
+
+  {
+    "name": "Orange Juice",
+    "category": "juice"
+  },
+
+  {
+    "name": "Apple Juice",
+    "category": "juice"
+  },
+
+  {
+    "name": "Mars Bar",
+    "category": "candy"
+  },
+
+  {
+    "name": "Ferrero Rocher",
+    "category": "candy"
+  }
+]
