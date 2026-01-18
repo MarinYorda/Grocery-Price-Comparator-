@@ -29,7 +29,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     parser.add_argument(
         "--postal-code",
-        metavar=" CODE",
+        metavar="CODE",
         help="Postal code used to find nearby stores (ex. 'H5E 1Y4'). If ommited runs Stage 1 demo mode.",
     )
 
@@ -42,7 +42,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     parser.add_argument(
-        "--provider",
+        "--providers",
         nargs="+",
         metavar="STORE",
         choices=SUPPORTED_PROVIDERS,
@@ -87,7 +87,7 @@ def parse_args():
         args.postal_code = str(args.postal_code).strip().upper()
 
         if args.radius_km <= 0:
-            parser.error("-- radiums-km must be greater than 0.")
+            parser.error("-- radius-km must be greater than 0.")
         if args.limit <= 0:
             parser.error("--limit must be greater than 0.")
 
