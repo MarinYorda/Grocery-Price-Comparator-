@@ -8,12 +8,20 @@ Validate and normalize using Pydantic
 Compare store prices per product
 Print a readable report and results exported to a CSV file
 
-Currently where branch stage1 is at
+To run phase 1:
+Run:
+py requirements.txt
+py main.py --demo-json
 ------------------
 Phase 2: 
 Replace JSON files with real store APIs
 Store location (postal code -> shows nearby store branches)
 PostgreSQL to persist prices 
+
+To run phase 2:
+Run:
+py requirements.txt
+py main.py --postal-code "H4E 4N5"
 
 
 Phase 3:
