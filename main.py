@@ -2,6 +2,7 @@ from src import api_client, parser, comparator
 from src import output
 from src.cli import parse_args
 from src.services.geocoding import geocode_postal_code
+from src.services.store_locator_router import find_nearby_stores
 
 def run_stage1():
     # List of my raw store files
@@ -37,6 +38,16 @@ def run_phase2_sub(args):
     lat, lon = geocode_postal_code(args.postal_code)
     print("lat: ", lat)
     print("lon: ", lon)
+
+    stores = find_nearby_stores(lat, lon, args.radius_km, args.providers)
+
+    print("\n--- Nearby stores (stub) ---")
+    if not stores:
+        print("No stores found in given radius.")
+    else:
+        for s in stores:
+            print(f"- {s['provider'].upper()} | {s['name']} | {s['distance_km']} km")
+            print(f"  {s['address']}")
 
 def main():
     
