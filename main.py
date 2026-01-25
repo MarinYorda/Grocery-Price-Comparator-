@@ -3,6 +3,7 @@ from src import output
 from src.cli import parse_args
 from src.services.geocoding import geocode_postal_code
 from src.services.store_locator_router import find_nearby_stores
+from src.services.geo_utils import haversine_km
 
 def run_stage1():
     # List of my raw store files
@@ -26,20 +27,23 @@ def run_stage1():
 
     output.export_comparison_to_csv(results, "comparison_results.csv")
     print("\nSaved CSV: comparison_results.csv\n")
+    milk = comparator.compare_one_product(parsed_products, "milk")
+    print(milk)
 
 def run_phase2_sub(args):
     print("\n--- Phase 2 ---")
-    print("postal_code:", args.postal_code)
     print("radius_km", args.radius_km)
     print("providers:", args.providers)
     print("limit:", args.limit)
     print("output:", args.output)
     print("csv_path:", args.csv_path)
-    lat, lon = geocode_postal_code(args.postal_code)
-    print("lat: ", lat)
-    print("lon: ", lon)
+    user_lat, user_lon = geocode_postal_code(args.postal_code)
+    print("user_lat: ", user_lat)
+    print("user_lon: ", user_lon)
+    print("debug distance to provigo-0001:",
+          haversine_km(user_lat, user_lon, 45.5085, -73.5650))
 
-    stores = find_nearby_stores(lat, lon, args.radius_km, args.providers)
+    stores = find_nearby_stores(user_lat, user_lon, args.radius_km, args.providers)
 
     print("\n--- Nearby stores (stub) ---")
     if not stores:
@@ -48,6 +52,7 @@ def run_phase2_sub(args):
         for s in stores:
             print(f"- {s['provider'].upper()} | {s['name']} | {s['distance_km']} km")
             print(f"  {s['address']}")
+
 
 def main():
     
